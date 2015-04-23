@@ -1,0 +1,21 @@
+John Bogil iOS Test - Time Breakdown
+
+
+Main Menu : 2 hours
+Animation Section:
+	- spin button: 1 hour
+	- handle pan: 1 hour
+	- particle view: 1 hour
+Login Section:
+	- setting fonts/colors: 2 hours
+	- NSURLConnection: 2 hours
+	- parse API request: 1 hour
+ChatSection:
+	- caching: 1 hour
+	- dynamically sized cells: 3 hours
+	- multithreading: 1 hour
+Images: 1 hour
+Autolayout: 1 hour
+
+
+	

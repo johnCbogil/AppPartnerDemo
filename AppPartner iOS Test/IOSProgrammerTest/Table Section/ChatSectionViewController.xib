@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato ExtraLight.ttf">
+            <string>Machinato-ExtraLight</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatSectionViewController">
+            <connections>
+                <outlet property="tableView" destination="udg-gG-eTY" id="c0e-hS-RSA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="udg-gG-eTY">
+                    <rect key="frame" x="0.0" y="52" width="320" height="516"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="516" id="hh1-Lh-aVG"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Qfb-t0-gjY"/>
+                        <outlet property="delegate" destination="-1" id="Iog-10-8d2"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXY-l9-Ivj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bY-Kz-ENX">
+                            <rect key="frame" x="8" y="13" width="48" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="48" id="8X0-In-xgA"/>
+                            </constraints>
+                            <state key="normal" image="BackButton">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="1cb-Mh-taT"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHAT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE9-QK-lMQ">
+                            <rect key="frame" x="130" y="13" width="57" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="57" id="Mq7-RZ-G8q"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Machinato-ExtraLight" family="Machinato" pointSize="22"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="0bY-Kz-ENX" firstAttribute="top" secondItem="WXY-l9-Ivj" secondAttribute="top" constant="13" id="JLZ-l9-rTK"/>
+                        <constraint firstAttribute="bottom" secondItem="WE9-QK-lMQ" secondAttribute="bottom" constant="14" id="LJh-rX-e9E"/>
+                        <constraint firstItem="WE9-QK-lMQ" firstAttribute="leading" secondItem="0bY-Kz-ENX" secondAttribute="trailing" constant="74" id="Qha-7s-yeD"/>
+                        <constraint firstItem="0bY-Kz-ENX" firstAttribute="leading" secondItem="WXY-l9-Ivj" secondAttribute="leadingMargin" id="mNZ-7q-vjk"/>
+                        <constraint firstItem="0bY-Kz-ENX" firstAttribute="top" secondItem="WE9-QK-lMQ" secondAttribute="top" id="nbK-SK-uTE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="WXY-l9-Ivj" firstAttribute="leading" secondItem="udg-gG-eTY" secondAttribute="leading" id="Jdw-0b-CXU"/>
+                <constraint firstAttribute="bottom" secondItem="udg-gG-eTY" secondAttribute="bottom" id="NQP-Xy-GhU"/>
+                <constraint firstItem="WXY-l9-Ivj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="UNw-Jy-gH5"/>
+                <constraint firstItem="udg-gG-eTY" firstAttribute="top" secondItem="WXY-l9-Ivj" secondAttribute="bottom" constant="4" id="dFM-7c-hS6"/>
+                <constraint firstAttribute="trailing" secondItem="udg-gG-eTY" secondAttribute="trailing" id="hmJ-7t-EmA"/>
+                <constraint firstItem="WXY-l9-Ivj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mM8-aH-uQm"/>
+                <constraint firstItem="WXY-l9-Ivj" firstAttribute="trailing" secondItem="udg-gG-eTY" secondAttribute="trailing" id="ybM-6p-J7T"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="172" y="478"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BackButton" width="6" height="16"/>
+    </resources>
+</document>
